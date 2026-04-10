@@ -22,7 +22,7 @@
             width: 280px; background: var(--oscuro-panel); padding: 20px;
             display: flex; flex-direction: column; border-right: 1px solid var(--border);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
+            position: relative; flex-shrink: 0;
         }
         .sidebar.collapsed { margin-left: -280px; visibility: hidden; }
 
@@ -43,40 +43,56 @@
         .header { 
             background: var(--oscuro-panel); padding: 12px 25px; 
             border-bottom: 3px solid var(--guinda); display: flex; 
-            justify-content: space-between; align-items: center; z-index: 50;
+            justify-content: space-between; align-items: center; z-index: 100;
         }
 
         .btn-toggle { background: transparent; border: 1px solid var(--border); color: var(--dorado); padding: 5px 10px; cursor: pointer; border-radius: 4px; font-size: 1.2rem; }
         .btn-toggle:hover { background: var(--oscuro-card); }
 
-        .table-container { flex-grow: 1; overflow: auto; padding: 15px; background: var(--oscuro-total); }
+        .table-container { flex-grow: 1; overflow: auto; padding: 0; background: var(--oscuro-total); }
 
-        /* TABLA DARK MODE */
-        table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 0.85rem; background: var(--oscuro-panel); border-radius: 8px; overflow: hidden; }
+        /* TABLA DARK MODE ESTRUCTURA FIJA */
+        table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 0.85rem; background: var(--oscuro-total); }
 
-        /* Cabeceras fijas con ocultamiento de texto al scroll */
+        /* Cabeceras de Estados (Fijas arriba) */
         thead th { 
-            position: sticky; top: 0; background: var(--guinda); color: white; 
-            padding: 18px; z-index: 20; border-bottom: 2px solid var(--dorado);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            position: sticky; 
+            top: 0; 
+            background: var(--guinda); 
+            color: white; 
+            padding: 18px; 
+            z-index: 50; /* Mayor que la columna de indicadores */
+            border-bottom: 2px solid var(--dorado);
+            border-right: 1px solid rgba(255,255,255,0.1);
         }
 
-        /* Primera columna (Indicadores) fija */
-        tbody td:first-child { 
-            position: sticky; left: 0; background: var(--oscuro-panel); 
-            font-weight: 600; z-index: 10; border-right: 2px solid var(--dorado); 
-            min-width: 300px; color: var(--dorado);
-            box-shadow: 4px 0 6px rgba(0,0,0,0.2);
+        /* Columna de Indicadores (Fija a la izquierda) */
+        tbody td:first-child, thead th:first-child { 
+            position: sticky; 
+            left: 0; 
+            background: var(--oscuro-panel); 
+            font-weight: 600; 
+            z-index: 40; 
+            border-right: 3px solid var(--dorado); 
+            min-width: 320px; 
+            max-width: 320px;
+            color: var(--dorado);
         }
 
-        /* Esquina superior izquierda */
-        thead th:first-child { z-index: 30; left: 0; background: var(--oscuro-total); color: var(--dorado); }
+        /* Intersección (Esquina superior izquierda) */
+        thead th:first-child { 
+            z-index: 60; /* La más alta de todas */
+            background: var(--oscuro-total); 
+        }
 
         td { padding: 14px; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); text-align: center; }
-        
+        td:first-child { text-align: left; }
+
         /* Filas de Categoría */
         .row-categoria { background: var(--oscuro-card) !important; font-weight: bold; color: #fff; letter-spacing: 1px; }
         .row-categoria td { text-align: left !important; border-bottom: 2px solid var(--border); }
+        /* Forzar que la categoría mantenga el color en la celda fija */
+        .row-categoria td:first-child { background: var(--oscuro-card) !important; color: var(--dorado); }
 
         /* Veracruz Highlight */
         .col-veracruz { background: rgba(178, 136, 84, 0.08) !important; color: #fff; font-weight: 600; }
@@ -84,8 +100,7 @@
         .btn-action { background: var(--guinda); color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.75rem; }
         .btn-action:hover { filter: brightness(1.2); }
 
-        /* Ocultar scrollbars estéticos */
-        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar { width: 10px; height: 10px; }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--dorado); }
     </style>
@@ -99,7 +114,7 @@
             <button class="btn-action" style="flex:1" onclick="marcarTodos(false)">Ninguno</button>
         </div>
         <div class="sidebar-scroll" id="lista-estados"></div>
-        <p style="font-size: 0.65rem; color: #555;">Observatorio Nacional de Pensiones 2026</p>
+        <p style="font-size: 0.65rem; color: #555; text-align: center;">IPE Veracruz - 2026</p>
     </div>
 
     <div class="main-content">
@@ -108,7 +123,7 @@
                 <button class="btn-toggle" onclick="toggleSidebar()">☰</button>
                 <div>
                     <h1 style="margin:0; font-size: 1.1rem; letter-spacing: 1px;">OBSERVATORIO DE PENSIONES</h1>
-                    <small style="color: var(--dorado); font-weight: bold; text-transform: uppercase; font-size: 0.65rem;">Análisis Comparativo Nacional - IPE Veracruz</small>
+                    <small style="color: var(--dorado); font-weight: bold; text-transform: uppercase; font-size: 0.65rem;">Benchmarking Comparativo Nacional</small>
                 </div>
             </div>
             <button class="btn-action" onclick="window.print()">EXPORTAR REPORTE</button>
@@ -150,6 +165,7 @@
         function renderSidebar() {
             const container = document.getElementById('lista-estados');
             columns.slice(1).forEach((estado, index) => {
+                if(!estado) return;
                 const div = document.createElement('div');
                 div.className = 'estado-check';
                 div.innerHTML = `
@@ -171,10 +187,10 @@
             tbody.innerHTML = '';
 
             fullData.forEach(row => {
+                if(!row[columns[0]]) return;
                 const tr = document.createElement('tr');
                 const indicador = row[columns[0]];
                 
-                // Categoría si el resto de columnas están vacías
                 const esCategoria = columns.slice(1).every(col => !row[col] || row[col].trim() === "");
                 if (esCategoria) tr.className = 'row-categoria';
 
