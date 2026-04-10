@@ -8,95 +8,110 @@
         :root {
             --guinda: #7A1737;
             --dorado: #B28854;
-            --oscuro: #161b22;
-            --bg: #f4f4f4;
+            --oscuro-total: #0d1117;
+            --oscuro-panel: #161b22;
+            --oscuro-card: #21262d;
+            --texto-claro: #c9d1d9;
+            --border: #30363d;
         }
 
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; height: 100vh; overflow: hidden; background: var(--bg); }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; height: 100vh; overflow: hidden; background: var(--oscuro-total); color: var(--texto-claro); }
         
-        /* MENÚ LATERAL */
+        /* SIDEBAR COLAPSABLE */
         .sidebar {
-            width: 280px; background: var(--oscuro); color: white;
-            padding: 20px; display: flex; flex-direction: column;
-            box-shadow: 4px 0 10px rgba(0,0,0,0.3); z-index: 100;
+            width: 280px; background: var(--oscuro-panel); padding: 20px;
+            display: flex; flex-direction: column; border-right: 1px solid var(--border);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
         }
+        .sidebar.collapsed { margin-left: -280px; visibility: hidden; }
 
-        .sidebar h2 { color: var(--dorado); font-size: 1.2rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .sidebar h2 { color: var(--dorado); font-size: 1.1rem; margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
         
         .sidebar-scroll { overflow-y: auto; flex-grow: 1; margin: 15px 0; }
 
         .estado-check { 
-            display: flex; align-items: center; gap: 10px; padding: 8px;
-            cursor: pointer; border-radius: 4px; transition: 0.2s;
+            display: flex; align-items: center; gap: 10px; padding: 10px;
+            cursor: pointer; border-radius: 6px; transition: 0.2s; font-size: 0.85rem;
         }
-        .estado-check:hover { background: rgba(255,255,255,0.1); }
+        .estado-check:hover { background: var(--oscuro-card); color: var(--dorado); }
         .estado-check input { accent-color: var(--dorado); }
 
         /* CONTENIDO PRINCIPAL */
-        .main-content { flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; }
+        .main-content { flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; position: relative; }
 
-        .header { background: white; padding: 15px 30px; border-bottom: 4px solid var(--guinda); display: flex; justify-content: space-between; align-items: center; }
-
-        /* BOTONES DE CONTROL */
-        .controls { display: flex; gap: 10px; }
-        .btn { 
-            padding: 8px 15px; border-radius: 5px; border: none; cursor: pointer; 
-            font-weight: bold; font-size: 0.8rem; transition: 0.3s;
+        .header { 
+            background: var(--oscuro-panel); padding: 12px 25px; 
+            border-bottom: 3px solid var(--guinda); display: flex; 
+            justify-content: space-between; align-items: center; z-index: 50;
         }
-        .btn-guinda { background: var(--guinda); color: white; }
-        .btn-guinda:hover { background: #5a1128; }
 
-        .table-container { flex-grow: 1; overflow: auto; padding: 20px; }
+        .btn-toggle { background: transparent; border: 1px solid var(--border); color: var(--dorado); padding: 5px 10px; cursor: pointer; border-radius: 4px; font-size: 1.2rem; }
+        .btn-toggle:hover { background: var(--oscuro-card); }
 
-        table { border-collapse: separate; border-spacing: 0; background: white; width: 100%; font-size: 0.85rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .table-container { flex-grow: 1; overflow: auto; padding: 15px; background: var(--oscuro-total); }
 
+        /* TABLA DARK MODE */
+        table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 0.85rem; background: var(--oscuro-panel); border-radius: 8px; overflow: hidden; }
+
+        /* Cabeceras fijas con ocultamiento de texto al scroll */
         thead th { 
             position: sticky; top: 0; background: var(--guinda); color: white; 
-            padding: 15px; z-index: 10; border: 1px solid rgba(255,255,255,0.1); 
+            padding: 18px; z-index: 20; border-bottom: 2px solid var(--dorado);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
 
-        /* Primera columna fija */
+        /* Primera columna (Indicadores) fija */
         tbody td:first-child { 
-            position: sticky; left: 0; background: #f9f9f9; 
-            font-weight: bold; z-index: 5; border-right: 3px solid var(--dorado); 
-            min-width: 280px; 
+            position: sticky; left: 0; background: var(--oscuro-panel); 
+            font-weight: 600; z-index: 10; border-right: 2px solid var(--dorado); 
+            min-width: 300px; color: var(--dorado);
+            box-shadow: 4px 0 6px rgba(0,0,0,0.2);
         }
 
-        thead th:first-child { z-index: 15; left: 0; background: var(--oscuro); }
+        /* Esquina superior izquierda */
+        thead th:first-child { z-index: 30; left: 0; background: var(--oscuro-total); color: var(--dorado); }
 
-        td { padding: 12px; border: 1px solid #eee; text-align: center; }
-        td:first-child { text-align: left; }
+        td { padding: 14px; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); text-align: center; }
+        
+        /* Filas de Categoría */
+        .row-categoria { background: var(--oscuro-card) !important; font-weight: bold; color: #fff; letter-spacing: 1px; }
+        .row-categoria td { text-align: left !important; border-bottom: 2px solid var(--border); }
 
-        .row-categoria { background: #e9ecef !important; font-weight: bold; color: var(--guinda); text-transform: uppercase; cursor: pointer; }
+        /* Veracruz Highlight */
+        .col-veracruz { background: rgba(178, 136, 84, 0.08) !important; color: #fff; font-weight: 600; }
 
-        /* Estilo Veracruz */
-        .col-veracruz { background-color: rgba(178, 136, 84, 0.05); }
+        .btn-action { background: var(--guinda); color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.75rem; }
+        .btn-action:hover { filter: brightness(1.2); }
 
-        .hidden { display: none; }
+        /* Ocultar scrollbars estéticos */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--dorado); }
     </style>
 </head>
 <body>
 
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <h2>INSTITUTOS</h2>
-        <div class="controls">
-            <button class="btn btn-guinda" onclick="marcarTodos(true)">Todos</button>
-            <button class="btn btn-guinda" onclick="marcarTodos(false)">Ninguno</button>
+        <div style="display:flex; gap:5px; margin-bottom:10px;">
+            <button class="btn-action" style="flex:1" onclick="marcarTodos(true)">Todos</button>
+            <button class="btn-action" style="flex:1" onclick="marcarTodos(false)">Ninguno</button>
         </div>
-        <div class="sidebar-scroll" id="lista-estados">
-            </div>
-        <p style="font-size: 0.7rem; color: #888;">* Seleccione para comparar en tiempo real.</p>
+        <div class="sidebar-scroll" id="lista-estados"></div>
+        <p style="font-size: 0.65rem; color: #555;">Observatorio Nacional de Pensiones 2026</p>
     </div>
 
     <div class="main-content">
         <div class="header">
-            <div>
-                <h1 style="margin:0; font-size: 1.3rem;">OBSERVATORIO DE PENSIONES ESTATALES</h1>
-                <small style="color: var(--dorado); font-weight: bold;">Benchmarking Comparativo Nacional</small>
+            <div style="display:flex; align-items:center; gap:15px;">
+                <button class="btn-toggle" onclick="toggleSidebar()">☰</button>
+                <div>
+                    <h1 style="margin:0; font-size: 1.1rem; letter-spacing: 1px;">OBSERVATORIO DE PENSIONES</h1>
+                    <small style="color: var(--dorado); font-weight: bold; text-transform: uppercase; font-size: 0.65rem;">Análisis Comparativo Nacional - IPE Veracruz</small>
+                </div>
             </div>
-            <div class="controls">
-                <button class="btn btn-guinda" onclick="window.print()">🖨️ Exportar PDF</button>
-            </div>
+            <button class="btn-action" onclick="window.print()">EXPORTAR REPORTE</button>
         </div>
 
         <div class="table-container">
@@ -123,6 +138,10 @@
             }
         });
 
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+        }
+
         function initApp() {
             renderSidebar();
             renderTable();
@@ -130,7 +149,6 @@
 
         function renderSidebar() {
             const container = document.getElementById('lista-estados');
-            // Saltamos la primera columna (Indicadores)
             columns.slice(1).forEach((estado, index) => {
                 const div = document.createElement('div');
                 div.className = 'estado-check';
@@ -146,11 +164,9 @@
             const checks = document.querySelectorAll('.sidebar-scroll input');
             const estadosVisibles = Array.from(checks).filter(c => c.checked).map(c => c.dataset.estado);
             
-            // Render Header
             const thead = document.getElementById('thead-row');
             thead.innerHTML = `<tr><th>INDICADOR</th>${estadosVisibles.map(e => `<th>${e}</th>`).join('')}</tr>`;
 
-            // Render Body
             const tbody = document.getElementById('tbody-content');
             tbody.innerHTML = '';
 
@@ -158,14 +174,14 @@
                 const tr = document.createElement('tr');
                 const indicador = row[columns[0]];
                 
-                // Detectar categoría
+                // Categoría si el resto de columnas están vacías
                 const esCategoria = columns.slice(1).every(col => !row[col] || row[col].trim() === "");
                 if (esCategoria) tr.className = 'row-categoria';
 
                 let rowHTML = `<td>${indicador}</td>`;
                 estadosVisibles.forEach(estado => {
                     const valor = row[estado] || "";
-                    const claseExtra = estado.includes("Veracruz") ? 'class="col-veracruz"' : '';
+                    const claseExtra = estado.toLowerCase().includes("veracruz") ? 'class="col-veracruz"' : '';
                     rowHTML += `<td ${claseExtra}>${valor}</td>`;
                 });
 
