@@ -60,6 +60,12 @@
     </style>
 </head>
 <body>
+    <nav class="nav"><div class="brand"><span></span></div></nav>
+    <div class="hero">
+        <h1>Observatorio de Sistemas de Pensiones Estatales</h1>
+        <div class="search-container"><input type="text" id="stateSearch" placeholder="Busca un estado..." oninput="filterStates()"></div>
+    </div>
+    <div class="grid-container" id="statesGrid"></div>
 
     <div class="profile-overlay" id="profilePanel">
         <div class="profile-header">
@@ -77,15 +83,14 @@
         let rawData = [];
         let states = [];
 
-        // Carga el CSV (Asegúrate de que el nombre sea exacto)
         Papa.parse("data.csv", {
             download: true,
             header: true,
             skipEmptyLines: true,
             complete: function(results) {
                 rawData = results.data;
-                // La primera columna de tu Excel DEBE llamarse "Instituto" o cambiamos esto:
-                states = results.meta.fields.slice(1); 
+                // Detectamos los estados (columnas de la 2 en adelante)
+                states = results.meta.fields.slice(1).filter(s => s && s.trim() !== ""); 
                 renderGrid();
             }
         });
@@ -109,23 +114,27 @@
             summaryCont.innerHTML = '';
             pilaresCont.innerHTML = '';
 
-            // Definición de bloques y palabras clave
+            // Definición de pilares
             const pilares = [
-                { id: 'demo', titulo: '👥 Demografía', keywords: ['activos', 'pensionados', 'derechohabiente', 'población'] },
-                { id: 'actuarial', titulo: '📊 Actuarial', keywords: ['reforma', 'actuarial', 'suficiencia', 'descapitalización'] },
-                { id: 'prestaciones', titulo: '💼 Prestaciones', keywords: ['préstamos', 'seguros', 'servicios', 'prestaciones'] },
-                { id: 'inversiones', titulo: '📈 Inversiones', keywords: ['inversión', 'portafolio', 'inmuebles', 'rendimiento'] }
+                { id: 'demo', titulo: '👥 Demografía', keywords: ['activos', 'pensionados', 'derechohabiente', 'población', 'asegurados'] },
+                { id: 'actuarial', titulo: '📊 Actuarial', keywords: ['reforma', 'actuarial', 'suficiencia', 'descapitalización', 'valuación', 'prima media'] },
+                { id: 'prestaciones', titulo: '💼 Prestaciones', keywords: ['préstamos', 'seguros', 'servicios', 'prestaciones', 'aguinaldo'] },
+                { id: 'inversiones', titulo: '📈 Inversiones', keywords: ['inversión', 'portafolio', 'inmueble', 'rendimiento', 'reserva', 'financiera'] }
             ];
 
-            // Datos rápidos
-            const resumenKeys = ['Nombre del titular', 'Tipo de sistema', 'Última Reforma'];
+            // 1. Resumen Ejecutivo Blindado (Busca coincidencias parciales)
+            const resumenKeys = ['titular', 'sistema', 'reforma'];
             resumenKeys.forEach(key => {
-                const row = rawData.find(r => Object.values(r)[0].toLowerCase().includes(key.toLowerCase()));
+                const row = rawData.find(r => {
+                    const firstCell = Object.values(r)[0];
+                    return firstCell && firstCell.toLowerCase().includes(key);
+                });
                 const val = row ? row[stateName] : "N/D";
-                summaryCont.innerHTML += `<div class="summary-box"><small>${key}</small><div>${val}</div></div>`;
+                const label = key === 'titular' ? 'Titular' : (key === 'sistema' ? 'Sistema' : 'Última Reforma');
+                summaryCont.innerHTML += `<div class="summary-box"><small>${label}</small><div>${val}</div></div>`;
             });
 
-            // Crear tarjetas de pilares
+            // 2. Crear contenedores de pilares
             pilares.forEach(p => {
                 const div = document.createElement('div');
                 div.className = 'data-group';
@@ -133,20 +142,29 @@
                 pilaresCont.appendChild(div);
             });
 
-            // Llenar datos
+            // 3. Llenar datos con lógica de clasificación
             rawData.forEach(row => {
                 const indicador = Object.values(row)[0];
+                if (!indicador) return;
+                
                 const valor = row[stateName] || "N/D";
                 const indLower = indicador.toLowerCase();
 
                 let clasificado = false;
                 pilares.forEach(p => {
                     if (p.keywords.some(k => indLower.includes(k))) {
-                        document.getElementById(`cont-${p.id}`).innerHTML += `
-                            <div class="data-row"><span class="label">${indicador}</span><span class="value">${valor}</span></div>`;
-                        clasificado = true;
+                        const target = document.getElementById(`cont-${p.id}`);
+                        if (target) {
+                            target.innerHTML += `<div class="data-row"><span class="label">${indicador}</span><span class="value">${valor}</span></div>`;
+                            clasificado = true;
+                        }
                     }
                 });
+                
+                // Si no entra en nada, va a "General" (lo metemos en Demografía por ahora)
+                if(!clasificado && !resumenKeys.some(rk => indLower.includes(rk))) {
+                     document.getElementById(`cont-demo`).innerHTML += `<div class="data-row"><span class="label">${indicador}</span><span class="value">${valor}</span></div>`;
+                }
             });
 
             panel.classList.add('active');
