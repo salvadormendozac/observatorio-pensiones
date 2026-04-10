@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Observatorio de Pensiones Estatales | IPE</title>
+    <title>Observatorio de Pensiones | IPE</title>
     <style>
         :root {
             --guinda: #7A1737;
@@ -12,112 +12,172 @@
             --bg: #f4f4f4;
         }
 
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: #333; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; height: 100vh; overflow: hidden; background: var(--bg); }
         
-        .header {
-            background: var(--oscuro); color: white; padding: 20px;
-            text-align: center; border-bottom: 5px solid var(--dorado);
+        /* MENÚ LATERAL */
+        .sidebar {
+            width: 280px; background: var(--oscuro); color: white;
+            padding: 20px; display: flex; flex-direction: column;
+            box-shadow: 4px 0 10px rgba(0,0,0,0.3); z-index: 100;
         }
 
-        .descripcion {
-            max-width: 1200px; margin: 20px auto; padding: 0 20px; 
-            color: #555; font-size: 0.95rem; line-height: 1.6; text-align: justify;
+        .sidebar h2 { color: var(--dorado); font-size: 1.2rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        
+        .sidebar-scroll { overflow-y: auto; flex-grow: 1; margin: 15px 0; }
+
+        .estado-check { 
+            display: flex; align-items: center; gap: 10px; padding: 8px;
+            cursor: pointer; border-radius: 4px; transition: 0.2s;
+        }
+        .estado-check:hover { background: rgba(255,255,255,0.1); }
+        .estado-check input { accent-color: var(--dorado); }
+
+        /* CONTENIDO PRINCIPAL */
+        .main-content { flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+        .header { background: white; padding: 15px 30px; border-bottom: 4px solid var(--guinda); display: flex; justify-content: space-between; align-items: center; }
+
+        /* BOTONES DE CONTROL */
+        .controls { display: flex; gap: 10px; }
+        .btn { 
+            padding: 8px 15px; border-radius: 5px; border: none; cursor: pointer; 
+            font-weight: bold; font-size: 0.8rem; transition: 0.3s;
+        }
+        .btn-guinda { background: var(--guinda); color: white; }
+        .btn-guinda:hover { background: #5a1128; }
+
+        .table-container { flex-grow: 1; overflow: auto; padding: 20px; }
+
+        table { border-collapse: separate; border-spacing: 0; background: white; width: 100%; font-size: 0.85rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+        thead th { 
+            position: sticky; top: 0; background: var(--guinda); color: white; 
+            padding: 15px; z-index: 10; border: 1px solid rgba(255,255,255,0.1); 
         }
 
-        .container { width: 98%; margin: 10px auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-
-        .table-wrapper { overflow: auto; max-height: 75vh; }
-
-        table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 0.85rem; }
-
-        /* Cabeceras de Estados Fijas */
-        thead th {
-            position: sticky; top: 0; background: var(--guinda);
-            color: white; padding: 15px; z-index: 10; border: 1px solid rgba(255,255,255,0.1);
-            min-width: 220px; text-transform: uppercase;
-        }
-
-        /* Indicadores Fijos a la izquierda */
-        tbody td:first-child {
-            position: sticky; left: 0; background: #f9f9f9;
-            font-weight: bold; z-index: 5; border-right: 3px solid var(--dorado);
-            min-width: 300px; color: var(--oscuro);
+        /* Primera columna fija */
+        tbody td:first-child { 
+            position: sticky; left: 0; background: #f9f9f9; 
+            font-weight: bold; z-index: 5; border-right: 3px solid var(--dorado); 
+            min-width: 280px; 
         }
 
         thead th:first-child { z-index: 15; left: 0; background: var(--oscuro); }
 
-        td { padding: 12px; border: 1px solid #eee; }
+        td { padding: 12px; border: 1px solid #eee; text-align: center; }
+        td:first-child { text-align: left; }
 
-        /* Estilo para las categorías detectadas */
-        .row-categoria { background: #e9ecef !important; font-weight: bold; color: var(--guinda); }
-        
-        tr:hover td { background: rgba(178, 136, 84, 0.05); }
+        .row-categoria { background: #e9ecef !important; font-weight: bold; color: var(--guinda); text-transform: uppercase; cursor: pointer; }
 
-        .loading { padding: 50px; text-align: center; font-weight: bold; color: var(--guinda); }
+        /* Estilo Veracruz */
+        .col-veracruz { background-color: rgba(178, 136, 84, 0.05); }
+
+        .hidden { display: none; }
     </style>
 </head>
 <body>
 
-<div class="header">
-    <h1 style="margin:0; letter-spacing: 2px;">OBSERVATORIO DE SISTEMAS DE PENSIONES ESTATALES</h1>
-    <span style="color: var(--dorado); font-weight: bold;">INSTITUTO DE PENSIONES DEL ESTADO DE VERACRUZ</span>
-</div>
-
-<div class="descripcion">
-    <p>
-        <strong>Herramienta de inteligencia institucional</strong> diseñada para el análisis de <i>benchmarking</i> y la identificación de mejores prácticas en seguridad social estatal. Este tablero permite la visualización dinámica de indicadores críticos de los 32 sistemas de previsión social en México, facilitando la planeación estratégica y la sostenibilidad financiera del Instituto.
-    </p>
-</div>
-
-<div class="container">
-    <div id="loader" class="loading">Cargando base de datos nacional...</div>
-    <div class="table-wrapper">
-        <table id="tabla-pensiones">
-            <thead><tr id="thead-row"></tr></thead>
-            <tbody id="tbody-content"></tbody>
-        </table>
+    <div class="sidebar">
+        <h2>INSTITUTOS</h2>
+        <div class="controls">
+            <button class="btn btn-guinda" onclick="marcarTodos(true)">Todos</button>
+            <button class="btn btn-guinda" onclick="marcarTodos(false)">Ninguno</button>
+        </div>
+        <div class="sidebar-scroll" id="lista-estados">
+            </div>
+        <p style="font-size: 0.7rem; color: #888;">* Seleccione para comparar en tiempo real.</p>
     </div>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
-<script>
-    // Lee el CSV que subiste
-    Papa.parse("data.csv", {
-        download: true,
-        header: true,
-        skipEmptyLines: true,
-        complete: function(results) {
-            document.getElementById('loader').style.display = 'none';
-            const data = results.data;
-            const columns = results.meta.fields;
+    <div class="main-content">
+        <div class="header">
+            <div>
+                <h1 style="margin:0; font-size: 1.3rem;">OBSERVATORIO DE PENSIONES ESTATALES</h1>
+                <small style="color: var(--dorado); font-weight: bold;">Benchmarking Comparativo Nacional</small>
+            </div>
+            <div class="controls">
+                <button class="btn btn-guinda" onclick="window.print()">🖨️ Exportar PDF</button>
+            </div>
+        </div>
 
-            const theadRow = document.getElementById('thead-row');
-            columns.forEach(col => {
-                const th = document.createElement('th');
-                th.textContent = col;
-                theadRow.appendChild(th);
+        <div class="table-container">
+            <table id="tabla-pensiones">
+                <thead id="thead-row"></thead>
+                <tbody id="tbody-content"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script>
+        let fullData = [];
+        let columns = [];
+
+        Papa.parse("data.csv", {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+                fullData = results.data;
+                columns = results.meta.fields;
+                initApp();
+            }
+        });
+
+        function initApp() {
+            renderSidebar();
+            renderTable();
+        }
+
+        function renderSidebar() {
+            const container = document.getElementById('lista-estados');
+            // Saltamos la primera columna (Indicadores)
+            columns.slice(1).forEach((estado, index) => {
+                const div = document.createElement('div');
+                div.className = 'estado-check';
+                div.innerHTML = `
+                    <input type="checkbox" id="chk-${index}" checked onchange="renderTable()" data-estado="${estado}">
+                    <label for="chk-${index}">${estado}</label>
+                `;
+                container.appendChild(div);
             });
+        }
 
+        function renderTable() {
+            const checks = document.querySelectorAll('.sidebar-scroll input');
+            const estadosVisibles = Array.from(checks).filter(c => c.checked).map(c => c.dataset.estado);
+            
+            // Render Header
+            const thead = document.getElementById('thead-row');
+            thead.innerHTML = `<tr><th>INDICADOR</th>${estadosVisibles.map(e => `<th>${e}</th>`).join('')}</tr>`;
+
+            // Render Body
             const tbody = document.getElementById('tbody-content');
-            data.forEach(row => {
-                const tr = document.createElement('tr');
-                
-                // Detectar categoría: si todas las celdas menos la primera están vacías
-                const valoresCeldas = Object.values(row).slice(1).filter(v => v && v.trim() !== "");
-                if (valoresCeldas.length === 0) {
-                    tr.classList.add('row-categoria');
-                }
+            tbody.innerHTML = '';
 
-                columns.forEach(col => {
-                    const td = document.createElement('td');
-                    td.textContent = row[col] || "";
-                    tr.appendChild(td);
+            fullData.forEach(row => {
+                const tr = document.createElement('tr');
+                const indicador = row[columns[0]];
+                
+                // Detectar categoría
+                const esCategoria = columns.slice(1).every(col => !row[col] || row[col].trim() === "");
+                if (esCategoria) tr.className = 'row-categoria';
+
+                let rowHTML = `<td>${indicador}</td>`;
+                estadosVisibles.forEach(estado => {
+                    const valor = row[estado] || "";
+                    const claseExtra = estado.includes("Veracruz") ? 'class="col-veracruz"' : '';
+                    rowHTML += `<td ${claseExtra}>${valor}</td>`;
                 });
+
+                tr.innerHTML = rowHTML;
                 tbody.appendChild(tr);
             });
         }
-    });
-</script>
 
+        function marcarTodos(val) {
+            document.querySelectorAll('.sidebar-scroll input').forEach(c => c.checked = val);
+            renderTable();
+        }
+    </script>
 </body>
 </html>
