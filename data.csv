@@ -1,202 +1,87 @@
-﻿Instituto,"Aguascalientes, ISSSSPEA","Baja California, ISSSTECALI","Campeche, ISSSTECAM","Chiapas, ISSTECH","Chihuahua, PCE","Coahuila, IPTECOAH","Coahuila, DIPETRE",Colima,"Durango, DPE","Estado de México, ISSEMyM","Guanajuato, ISSEG","Guerrero, ISSSPEG","Jalisco, IPEJAL","Michoacán, DPCE","Morelos, ICTSEGM",Nayarit,"Nuevo León, ISSSTELEON",Oaxaca,"Puebla, ISSSTEP",Querétaro,San Luis Potosí,"Sinaloa, IPES","Sinaloa, ISSSTESIN","Sonora, ISSSTESON","Tabasco, ISSET","Tamaulipas, IPSSET",Tlaxcala,"Veracruz, IPE","Yucatán, ISSTEY","Zacatecas, ISSSTEZAC",,,,,,,
-Adscripción/ Sectorizado,,Secretaría de Salud,Secretaría de Administración e Innovación Gubernamental,Secretaría de Hacienda,Descentralizado del Poder Ejecutivo Estatal (Secretaría de Hacienda),,No se encuentra sectorizado,"Organismo descentralizado de la Secretaría de Planeación, Finanzas y Administración",Secretaría de Finanzas y de Administración,,"Secretaría de Finanzas, Inversión y Administración",Secretaria de Finanzas y Administración,,Secretaría de Finanzas y Administración,,,Secretaría de Finanzas y Tesorería General del Estado,Secretaría de Administración,Secretaría de Salud del Estado de Puebla,,,,,,,,Organismo Público Descentralizado,Secretaría de Finanzas y Planeación del estado de Veracruz (SEFIPLAN),,Organismo Público Descentralizado. Sector Administración.,,,,,,,
-Tipo de sistema,,Beneficio Definido,Beneficio Definido,Benefico definido,Mixto (cuentas individuales y Beneficio definido),,Mixto (cuentas individuales y Beneficio definido),Beneficio Definido,Beneficio Definido,,Beneficio Definido,Beneficio Definido,,Beneficio Definido,,,Mixto,Beneficio Definido,Mixto,,,,,,,,Régimen Temporal de Reparto (Pensiones Definidas) y también a partir de 2014 Régimen Permanente de Ahorro Personal (Cuentas Individuales),Beneficio definido,,Beneficio Definido,,,,,,,
-Número de asegurados totales,,"140,387","13,990","88,645","94,136",,"9,794",23087,"28,618",,"87,881","37,192",,"63,912",,,"144,266","23,358","159,168",,,,,,,,"10,655","125,529",,"25,013",,,,,,,
-Asegurados activos,,"51,975","11,709","24,534","24,336",,84,16766,"21,345",,"67,533","32,254",,"55,907",,,"48,870","19,588","65,194",,,,,,,,"8,635","95,895",,"19,525",,,,,,,
-Pensionados directos,,"9,450","1,924","10,454","22,753",,"8,215",,"5,870",,"20,348","2,799",,"6,727",,,"21,580","2,963","7,419",,,,,,,,"1,644","24,336",,"4,908",,,,,,,
-Pensionados indirectos (Beneficiarios),,"2,118",357,"53,652","2,521",,"1,495",0,1403,, ,"2,139",,"1,278",,,"73,816",807,"1,817",,,,,,,,376,"5,298",,580,,,,,,,
-Catálogo de prestaciones,,I. Seguro de enfermedades no profesionales y de maternidad. II. Seguro de accidentes de trabajo y enfermedades profesionales.,"Jubilación necesaria
- Jubilación voluntaria
- Pensión por inhabilitación por causas ajenas al servicio
- Pensión por inhabilitación a causa del servicio
- Seguro de cesantia o separación
- Seguro de fallecimiento e invalidez","Seguro de enfermedades no profesionales y de maternidad.
- Seguro de riesgos de trabajo. 
- Seguro de pensión por jubilación.
- Seguro de pensión por vejez.
- Seguro por pensión por invalidez.
- Seguro de pensión por viudez. 
- Seguro de pensión por orfandad. 
- Seguro de pensión por ascendientes.","Pensiones por jubilación.
-  Pensiones por antigüedad.
-  Pensiones por retiro anticipado.
-  Pensiones por invalidez y/o por riesgo de trabajo.
-  Pensiones por viudez, orfandad y ascendencia. Nota. El otorgamiento de las mismas varía según los régimenes previstos en la Ley de Pensiones Civiles del Estado de Chihuahua",,,,"Pensión por jubilación
- Pensión por edad y tiempo de servicio
- Pensión por invalidez
- Pensión por fallecimiento","Seguro de vida
-Seguro de muerte","Pensión por jubilación
-Pensión por retiro anticipado
-Pensión por edad y tiempo de servicio
-Pensión por invalidez
-Pensión por fallecimiento","Seguro de riesgos de trabajo
- Seguro de invalidez
- Seguro de vejez
- Seguro de jubilación
- Seguro de muerte
- Seguro de vida","Seguro de riesgos de trabajo
- Seguro de invalidez
- Seguro de vejez
- Seguro de jubilación
- Seguro de muerte
- Seguro de vida
- Seguro de retiro",Seguro de Riesgos de trabajo Seguro de Jubilación Seguro de Vejéz Seguro de Invalidez Seguro por Causa de Muerte Indemnización Global,,,,"Seguro de Enfermedades y Maternidad
- Seguros de Riesgos de Trabajo Pensión por Invalidez 
- Pensión por Causa de Muerte 
- Seguro de Vida","Pensión por Jubilación
- Pensión por Vejez
- Pensión por Inhabilitación por riesgosde trabajo. 
- Pensión por Invalidez por Causas Ajenas al Servicio.
- Pensión por muerte del trabajador por Riesgos de Trabajo
- Pensión por Muerte del Trabajador por Causas Ajenas al Servicio.
- Pensión por Muerte de los Jubilados o Pensionados","Pensiones
- Pago Postumo",,,, ,,,"Régimen Temporal de Reparto
- 
- N/A
- 
- Régimen Permanente de Ahorro Personal.
- 1. Seguro de invalidez y vida.
- 2. Seguro de retiro.
- 3. Seguro de salud.",,,"Jubilación
- Jubilación Anticipada
- Vejez
- Viudez, Orfandad y Ascendencia
- Orfandad
- Invalidez (Riesgo de Trabajo y Enfermedades Generales)
- Aguinaldo 60 días
- Devolución de Cuotas
- Póliza de Defunción
- Póliza de Ayuda para gastos de funeral",,,,,,,
-Catálogo de préstamos,,"I. Créditos para la adquisición en propiedad de casa o terrenos para la construcción de las mismas, destinadas a la habitación familiar del trabajador. II.Arrendamiento de habitaciónes económicas pertenecientes al Instituto, III.Prestamos Hipotecarios, IV. Préstamos a corto plazo, V. Jubilación, VI. Pensión de retiro por edad y tiempo de servicios, VII. Pension por Invalidez, VIII. Pensión por causa de muerte, IX. Indemnización Global, X. Pago Póstumo","Préstamos a corto plazo
- Préstamos de reestructura
- Préstamos sin interés (Útiles escolares, Día de reyes, Lentes, Servicios funerarios)
- Préstamo para pago de derechos","Préstamos a corto plazo,
- Préstamos hipotecarios","Pensiones
-  Préstamos
-  Ayuda económica para gastos funerarios",,,"*Préstamos Personales de fondo global (Estado) (Universidad Autonoma Agraria Antonio Narro) *Préstamos personales de Cuentas individuales (Estado) *Gastos de Funeral a Beneficiarios del pensionado (Estado , Univeridad Autonoma de Coahuila, Universidad Autonoma Agraria Antonio Narro)",Préstamos personales,"Préstamo a corto plazo 
-Préstamo hipotecario","Préstamos a corto, mediano y largo plazo
-Préstamos emergentes
-Crédito prendario (en ley, no en operación)
-Créditos hipotecario (en ley, no en operación","Préstamos a corto plazo
- Préstamos con garantía hipotecaria","Préstamos personales
- Préstamos con garantía hipotecaria",Préstamos a Corto Plazo Préstamos a Mediano Plazo para la Adquisición de Bienes de Uso Duradero Préstamos de apoyo para el Pago inicial de adquisición de Vivienda Extraordinarios para Damnificados de Desastres Naturales.,,,,"Sistema Certificado para Jubilación
- Prestamos a Corto Plazo
- Prestamo a Mediano Plazo
- Prestamo a Largo Plazo","Gastos de Defunción por fallecimiento de un trabajador, del Jubilado o Pensionado. 
- Préstamos Quirografarios Préstamos Hipotecarios
- Devolución del Fondo de Pensiones","Medicina preventiva
- Atención de enfermades
- Reintegro Cuotas
- Créditos a corto, mediano y largo plazo
- Estancias infantiles
- Créditos extraordinarios por desastres naturales
- Servicios Turísticos
- Servicios Funerarios",,,, ,,,"Régimen Temporal de Reparto
- 1. Pensión por Jubilación.
- 2. Pensión por vejez.
- 3. Pensión por invalidez.
- 4. Pensión por muerte.
- 5. Pago póstumo a los pensionados por jubilación, vejez o invalidez.
- 
- Régimen Permanente de Ahorro Personal
- 
- 1. Pensión por cesantía en edad avanzada.
- 2. Pensión por vejez.
- 3. Pensión por muerte.",,,"Préstamos:
- Corto Plazo
- Mediano Plazo",,,,,,,
-Otras prestaciones,,,,,,,,,,N/A,"Ayuda por fallecimiento de pensionados
-Devolición de cuotas",,Gastos de funeral para pensionados,,,,,,,,,,,,,,,,,,,,,,,,
-Catálogo de otros servicios a derechohabientes,,***,"Centro Integral del Adulto Mayor (CIAM)
- Centro de Desarrollo Infantil (CENDI)","Casa Geriátrica Lúdica, Servicios deportivos y culturales",Ahorro solidario,,,,"Casa del jubilado (1)
- Crédito en Restaurante
- Crédito en cementerio y mausoleo",N/A,"Casa del jubilado (1)
-Cementerio y mausoleo (1), con crédito en ventas a futuro","Casas de Jubilado
- CENDI de pensiones","Casas de Jubilados (casas de día)
- CREDISSEG (crédito farmacias)
- Ahorro Voluntario",Casas de Día Para Jubilados y Activos Unidad Recrreativa,,,,Club del Jubilado y Platicas a los Derechohabientes.,"Cursos, talleres, convivencias, eventos sociales y culturales para la población pensionada",N/A,,,, ,,,Créditos a pensionados y servidores públicos; y Fondo Mutual a pensionados.,,,"Casas del Jubilado (Zacatecas, Fresnillo y Jerez) 
- Centro Recreativo “Las Margaritas”
- Centro Deportivo y Cultural
- Departamento de Seguridad y Bienestar Social",,,,,,,
-Servicios de salud,,Hospitales y Clínicas Propios,Subrogado al IMSS,Propio y subrogación con hospitales federales de tercer nivel,"Medicina familiar
-  Odontología
-  Pediatría
-  Planificación familiar
-  Detección oportuna del cáncer
-  Psicología
-  Servicios hospitalarios y especialistas subrogados con instituciones médicas privadas",,,Servicio Medico de los Trabajadores de la Educación (organismo descentralizado distinto),Subrogados al ISSSTE,Subrogado a servicio privado exclusivo para Magisterio Estatal,Subrogados al ISSSTE,Subrogados al IMSS,Subrogados al ISSSTE,Subrogadas al ISSSTE,,,,"El servidor público, Jubilado, Pensionado o Pensionista y sus beneficiarios tienen derecho a la asistencia médica, clínica, quirúrgica, hospitalaria, farmacéutica y de rehabilitación,","La ley de Pensiones no contempla servicios de salud, sin embargo se ofrecen servicios médicos de primer contacto",Si,,,, ,,,Subrogado (Servicios Farmacéuticos de Pensiones Civiles de Tlaxcala A.C). Médicos particulares,,,IMSS Completo.,,,,,,,
-Requisito de antigüedad para pensión por jubilación,Retiro: 65 años y 15 de cotización,30 de cotización,Jubilación necesaria: 55 años y 15 de cotización,Jubilación: 30 años de cotización para hombres y 28 mujeres,Requisitos Mujeres 28 años de servicio y Hombres 30 años de servicio,35 años de servicio,35 años de servicio,,,"Generaciones en transición:  años de servicios M-28 y H-30
-
-Nuevas generaciones: 65 años de edad, años de servicios M-28 y H-30  
-
-Vejez: 65 años de edad, con al menos 15 años de servicio
-","Generaciones en transición: de 30 o 35
-
-Nuevas generaciones: 35","Retiro por edad y tiempo de servicios:
- 62 años de edad y 17 de servicio.","Jubilación: 60 años y 30 de cotización H, 28 M",65 años,,Jubilación: 30 de cotización,,, ,Nuevas Generaciones: Jubilación. 65 años cumplidos de edad y 33 de servicio para los hombres y 63 años cumplidos de edad y 31 de servicio para las mujeres Generación actual: Jubilación. 29 años de servicio para los hombres y 25 años de servicio para las mujeres.,Jubilación: 65 años y 30 de cotización,,,"Jubilación: 35 años de cotización H, 33 años M","Jubilación: mujeres 30 y hombres 35 de cotización y una edad equivalente al 85% del indicador
- de esperanza de vida que para el Estado publique el CONAPO.",Jubilación: 62 años y 30 de cotización para hombres y 60 edad y 25 de cotización mujeres,30 años de cotización,Jubilación: (nueva generación a partir del 22 de julio de 2014) 65 años y 30 de cotización (Generación en transición antes de 1997 y hasta 25 de noviembre de 2007): 53 años y 30 de cotización (Generación en transición 26 de noviembre de 2007 hasta 21 de julio de 2014): 60 años y 30 de cotización,30 de cotización,30 de cotización,,,,,,,
-Requisito mínimo de edad para pensión por vejez o jubilación anticipada,,,,,58 año de edad para ambos sexos,Factor 85 (85% Esperanza de vida del trabajador) para ambos sexos,Factor 80 (80% Esperanza de vida del trabajador) para ambos sexos,,,Vejez: 65 años de edad,"Generaciones en transición: de 55 a 60
-
-Nuevas generaciones: 65","Retiro en edad avanzada:
- 67 años de edad ",Vejez: 60 años,,,,,,,,60 años,,,55 años,"Una edad equivalente al 85% del indicador
- de esperanza de vida que para el Estado publique el CONAPO.",65 años,65 años,,60 años,15 años,,,,,,,
-Requisito mínimo de antigüedad para pensión por vejez o jubilación anticipada,,Retiro: 65 años y 15 de cotización,Jubilación voluntaria: 30 años de cotización,Vejez: 55 años y 15 de cotización,15 años de servicio como mínimo.,"20 años de servicio como mínimo. (Retiro anticipado 5 años antes de Edad, con un % de disminución en su pensión)",20 años de servicio como mínimo cotizados.,,,Vejez:  al menos 15 años de servicio,"Generaciones en transición: 15
-
-Nuevas generaciones: 15","Retiro en edad avanzada:
- 67 años de edad y 15 de servicio.",Vejez: 15 de cotización,Vejez: 60 años y 20 de cotización,,Vejez: 65 años y 15 de cotización,,,"1. Forma JYP-1 (Solicitud de Jubilación/Pensión)
- 2. Constancia de años de servicio
- 3. Recibos de Nómina de los últimos dos meses
- 4. Acta de Nacimiento reciente
- 5. Copia de Identificación oficial
- 6. CURP
- 7. 65 años de edad cumplidos",Nuevas Generaciones: Vejez: 65 años cumplidos de edad y por lo menos 15 años de servicio. Generación actual: Vejez: 60 años cumplidos de edad y por lo menos15 años de servicio,Jubilación anticipada: 60 años y 30 de cotización,,,Vejez: 55 años y 15 de cotización,"Edad y tiempo de servicio: 20 años de cotización y una edad equivalente al 85% del indicador
- de esperanza de vida que para el Estado publique el CONAPO.",Pensión anticipada: 65 años de edad y 10 de cotización,Un mínimo 20 años de cotización (monto variable conforme a los años cotizados).,Vejez: (nueva generación a partir del 22 de julio de 2014) 65 años y 15 de cotización (generación en transicición antes de 1997 y hasta el 21 de julio de 2014) 60 años y 15 de cotización,15 de cotización,Vejez: por lo menos 15 de cotización,,,,,,,
-,,,"A partir de la reforma de 2005 las pensiones serán complementarias al IMSS, por lo que son los requisitos de este.",,,,,,,n/a,Retiro anticipado: 60 años y 15 de cotización,"Jubilación:
- 62 años de edad y 35 de servicio.",,,,,,,,"Inhabilitación: Cuando el trabajador quede inhahilitado fisica o intelectualmente, de manera permanente o temporal y por causas o consecuencias del servicio, sea cual fuere el tiempo de este. 
- Invalidez por causas ajenas al trabajo: Invalidarse por causas ajenas al trabajo y contar con almenos 5 años de servicio.
- Fallecimiento por Causas de Riesgo de Trabajo: Fallecer por causas de trabajo independientemente de la antigüedad. 
- Fallecimiento por Causas Ajenas al Trabajo: Fallecer por causas ajenas del trabajo y contar con al menos 5 años de cotización.",Retiro: 65 edad y 15 cotización,,,"Cesantía en edad avanzada: 60 edad, 10 cotización",,Pensión de Retiro por edad avanzada y tiempo de servicio: 62 años hombres y 60 mujeres y 15 de cotización,"Pensión por Invalidez: se proporciona a los servidores públicos que se inhabiliten física o mentalmente, siempre que hayan contribuido un mínimo de 15 años, (monto variable conforme a los años cotizados).
- Pensión por Causa de Muerte: el fallecimiento del servidor público o pensionado dará origen a la pensión de viudez, orfandad o ascendencia, según corresponda; y se proporcionará siempre que el servidor público haya cotizado un mínimo de 15 años (Monto variable conforme a los años cotizados) o en su caso, haya sido pensionado por jubilación, vejez o invalidez.",Pensión anticipada: 60 edad y 15 cotización,,Jubilación anticipada: 60 años y 15 de cotización,,,,,,,
-Requisito mínimo de antigüedad para pensión por invalidez,,,,,1 año,1 año,5 años,,,al menos con 3 años de servicios al momento de la invalidez,10,,,,,,,,,,,,,,,,,,,5 años de cotización,,,,,,,
-Salario regulador,Promedio de los últimos 36 meses para el personal de confianza y 12 meses para el personal sindicalizado,Sueldo regulador: promedio de los últimos 10 años del SBC actualizado con el INPC,"Promedio de los últimos 3 años del salario de cotización, actualizado en VSM.",Ultimo sueldo para trabajadores de base y el promedio de los últimos 3 años para confianza,100% último sueldo devengado (promedio de los últimos 4 años de haber incrementos no generales o escalafonarios).,"Promedio ponderado de los salarios sujetos a cotización que obtuvo durante su vida laboral activa, previa actualización conforme al Índice Nacional de Precios al Consumidor.","Monto máximo de la renta vitalicia, previo descuento de los seguros de sobrevivencia, que resulte del saldo acumulado en la cuenta individual y la pensión mínima garantizada. (2 salarios mínimos generales)",,,"Promedio de los ultimos 7 años de sueldo de cotizacion, excluyendo aguinaldo o gratificaciones.","Transición: Propedio del último año de sueldo base de cotización, si no tovo variaciones en los últimos 5 años. Si el sueldo base se cotización presentó variaciones, el promedio de los últimos 3 años de sueldo base de cotización, actualizado con INPC 
-
-Nueva generación: promedio últimos 20 años del sueldo base de cotización actualizado con INPC",Sueldo de referencia: promedio de los últimos 8 meses de sueldo de cotización,Promedio de los últimos 5 años de cotización (actualizados a VP con el incremento anual del SBC),Último sueldo básico cotizador,,Salario regulador: promedio últimos 3 años del salario base de cotización,,,Último salario de cotización neto,"Sueldo
- PSM
- Vida Cara
- Quinquenios
- Despensa",11422.71,,,Sueldo regulador: promedio de los últimos 10 años del SBC actualizado con el INPC,Salario regulador: promedio últimos 3 años del salario base,Salario regulador: promedio últimos 5 años del salario base de cotización actualizado con INPC,"El promedio de los salarios base percibido en el último año de la vida activa del Servidor Público, actualizados usando el Índice Nacional de Precios al Consumidor","Sueldo regulador (Nueva generación) : promedio de los sueldos del trabajador durante su vida laboral, actualizados con el INPC Para la generación en transición, será el promedio ponderado de los sueldos de cotización, de acuerdo a los años que falten al trabajador para cumplir treinta años de cotizaciones al Instituto y de acuerdo con la entrada en vigor de la ley 287 (22 de julio de 2014), previa actualización mediante el INPC",Último sueldo,Salario regulador: promedio últimos 5 años del salario base de cotización actualizado con INPC,,,,,,,
-Límites de pensión mínima y máximo,NA,Mínimo de 2 SM y máximo de 20 SM por día para burocracia y 30 SM por día para magisterio,Máximo de 25 SM,Máximo de 10 Unidades de Medida y Actualización y mínimo al monto mensual que establezca la Junta Directiva,No existen límites,No existen límites,Pensión mínima garantizada. (2 salarios mínimos generales),,,Mínima 1 SM y máxima 16 UMAS,Máximo de 18 SM y mínimo 2 SM,Máximo de 12SM,El monto de la pensión no podrá exceder el límite superior del salario de cotización (10 SM),Máximo de 15 SM y mínimo 1.5 SM (Actualizado a UMA),,Jubilación: máximo de 20 SM y mínimo 1 SM,,,Máximo de 25 SM y mínimo 1 SM,"Para personal de confianza no podrá ser inferior a una UMA, ni podrá exceder a 3.5 UMAS",Máximo de 17 SM y mínimo 1 SM,,,Jubilación: mínimo de 2 SM y máximo de 20 SM,Máximo de 35 SM y mínimo 1 SM,Máximo de 10 SM y mínimo 1 SM,La Institución no podrá otorgar pensiones mayores a diez salarios mínimos. La Institución tampoco podrá otorgar ningún tipo de pensión cuya cuantía sea menor al equivalente de un salario mínimo.,"26 SM, hay casos en los que puede no aplicar, por cuestiones de acuerdos de consejo o mandatos judiciales",NA,Máximo de 25 SM y mínimo 1 SM,,,,,,,
-Pensión máxima,,,,,Sin límite,Sin límite,Sin límite,,,"$52,113.60",,,,,,,,,,,,,,,,,,,,106520,,,,,,,
-Pensión promedio,,,,,"22,872","22,872","12,446",,,"$20,926.93",,,,,,,,,,,,,,,,,,,,20578,,,,,,,
-¿Cómo se actualizan las pensiones en el tiempo?,,,,,Conforme a los incrementos de los trabajadores en activo,Conforme a los incrementos de los trabajadores en activo,Conforme al INPC,,,"Se incrementarán en el mes de febrero en la misma proporción en que se incremente el Índice Nacional de Precios al Consumidor en el año calendario anterior.
-
-En el caso de los sindicalizados, en la misma proporción en qué se da el aumento anual a los activos","Transición: Igual que a los trabajadores en activo
-
-Nueva generación: Conforme al INPC",,Se actualizan conforme aumenta el salario base de cotización de la plaza,,,,,,,,,,,,,,,,,"El monto de las pensiones aumentará al mismo tiempo y en la misma proporción que el Índice Nacional de Precios al Consumidor, considerando para tal efecto el correspondiente al mes de enero de cada año.",,,,,,,
-Días de aguinaldo a pensionados,,,,,"Varía según institución, magisterio 93 días, burócratas 40 días","Varía según institución, magisterio 93 días, burócratas 40 días","Varía según institución, magisterio 93 días, burócratas 40 días",,,45 DÍAS,"Transición: Magisterio, 90 días; Burócratas, 63 días
-
-Nueva generación: 63 días",,,,,,,,,,,,,,,,,,,Sesenta días de pensión.,,,,,,,
-Préstamos a Corto Plazo (si/no),,,,,Si,,,SI,Si,,Sí,,,,,,Si,,,,,,,,,,,,,Si,,,,,,,
-Tipo de Fondeo,,,,,Cuentas Individuales y recursos propios,,,EXCEDENTE DE CUOTAS Y APORTACIONES,FONPAR: Separación de 2 puntos porcentuales de la aportación y 1 punto porcentual del trabajador,,"Recursos propios 
-(7 puntos porcentuales de la cuota aportación)",,,,,,Recursos Propios,,,,,,,,,,,,,Recursos Propios,,,,,,,
-Tasa de interés anual,,,,,TIIE+14 puntos,,," Interés anual de 8 puntos adicionales a la inflación, calculada al momento de otorgar el préstamo, misma que permanecerá fija durante la vigencia del mismo.",PCP = TIIE + 1.3 mensual,,"13% anual, 14% anual en caso de renovación",,,,,,Inflación del año anterior + 6 puntos. Actual 13.82%,,,,,,,,,,,,,TIIE más 12,,,,,,,
-Préstamos para Vivienda (si/no),,,,,No,,,si,No,,Sí,,,,,,Si,,,,,,,,,,,,,Si,,,,,,,
-Con Garantía Hipotecaria (Si/No),,,,,No,,,si,No,,Sí,,,,,,Si,,,,,,,,,,,,,Si,,,,,,,
-Sin Garantía Hipotecaria (Si/No),,,,,No,,,no,No,,No,,,,,,SI,,,,,,,,,,,,,No,,,,,,,
-Aplica Subcuenta de Vivienda (Si/No),,,,,No,,,no,No,,No,,,,,,Si,,,,,,,,,,,,,No,,,,,,,
-Última valuación actuarial,,,,,2021,,,,2022,,2023,,,,,,,,,,,,,,,,,,,2022,,,,,,,
-Periodo de suficiencia en el escenario del 3% real anual,,,,,,,,,2023,,2057,,,,,,,,,,,,,,,,,,,2023,,,,,,,
-Prima Media General que marca el Estudio Actuarial en el escenario del 3% real,,,,,78.05,,,,2023,,,,,,,,,,,,,,,,,,,,,69.13%,,,,,,,
-¿Cuenta con inversiones financieras?,,Si (Fideicomisos),Si,Si,"Si, para cuenta individual",,si,No,Si,,Si,Si,,SI,,,Si,,,,,,,,,,NO,Si,,Si,,,,,,,
-Otras inversiones,,no,-,Bienes inmuebles,,,,No, Cementerio y mausoleo (1),,"Farmacias
- Estacionamientos
- Plazas Comerciales
- Hotel
- Parque Funerario",Conjunto Turistico Jcarandas Balcones al Mar Locales Comerciales Terrenos,,No,,,Si,,,,,,,,,,N/A,"Estacionamiento
- Hoteles
- Diversos bienes inmuebles (locales comerciales, cines, terrenos en breña)",,"Hoteles, Salas de Velación, Tiendas, Farmacias, Mueblería y otros Bienes Inmuebles.",,,,,,,
-Última Reforma,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Cuota Trabajador,9.00%,12.00%,11.00%,7.00%,3.00%,8.00%,12.00%,12.00%,7.00%,6.50%,15.00%,11.50%,5.00%,5.00%,13.50%,7.50%,16.50%,5.50%,,11.00%,,,9.00%,9.00%,5.50%,,,,,10.00%,10.00%,10.50%,12.00%,12.00%,6.00%,12.00%,12.00%
-Aportación Dependencia/ Estado,28.50%,20.00%,11.61%,12.00%,15.09%,20.00%,17.00%,17.00%,19.90%,67.00%,67.00%,29.00%,20.00%,1% y 2.5%,18.50%,9.27%,23.75%,9.00%,,13.00%,,,12.00%,18.50%,13.00%,,,,,17.00%,8.00%,21.50%,18.00%,20% (Nueva generación) 19% (Generación en transición),7.75%,14.00%,24.00%
-Cuota Pensionista,-,1.00%,3.00%,-,-,2.00%,12.00%,12.00%,-,-,-,,,,-,-,-,-,,-,,,-,9.00%,4.50%,,,,,-,-,-,6.00%,-,-,6%,6%
-Aportación Dependencia/ Estado,-,-,-,-,-,-,-,-,-,-,-,,,,-,-,-,-,,-,,,-,18.50%,-,,,,,-,-,-,9.00%,-,-,6%,6%
+﻿INDICADOR,"Aguascalientes, ISSSSPEA","Baja California, ISSSTECALI","Campeche, ISSSTECAM","Chiapas, ISSTECH","Chihuahua, PCE","Coahuila, IPTECOAH","Coahuila, DIPETRE",Colima,"Durango, DPE","Estado de México, ISSEMyM","Guanajuato, ISSEG","Guerrero, ISSSPEG","Jalisco, IPEJAL","Michoacán, DPCE","Morelos, ICTSEGM",Nayarit,"Nuevo León, ISSSTELEON",Oaxaca,"Puebla, ISSSTEP",Querétaro,San Luis Potosí,"Sinaloa, IPES","Sinaloa, ISSSTESIN","Sonora, ISSSTESON","Tabasco, ISSET","Tamaulipas, IPSSET",Tlaxcala,"Veracruz, IPE","Yucatán, ISSTEY","Zacatecas, ISSSTEZAC"
+1. Bloque: Resumen Ejecutivo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Nombre del titular,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mtro. Luis Octavio Hernández Lara,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Tipo de sistema,,,,,,,,,,,,,,,,,,,,,,,,,,,,Beneficio Definido,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Año última Reforma,,,,,,,,,,,,,,,,,,,,,,,,,,,,2014,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Cuotas Trabajador (%),,,,,,,,,,,,,,,,,,,,,,,,,,,,12%,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Aportación Estado (%),,,,,,,,,,,,,,,,,,,,,,,,,,,,20%,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Adscripción / Sectorizado,,,,,,,,,,,,,,,,,,,,,,,,,,,,Secretaría de Finanzas y Planeación del Estado de Veracruz (SEFIPLAN),,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Sueldo Regulador,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Promedio de los sueldos del trabajador durante su vida laboral, actualizados con el INPC Para la generación en transición, será el promedio ponderado de los sueldos de cotización, de acuerdo a los años que falten al trabajador para cumplir treinta años de cotizaciones al Instituto y de acuerdo con la entrada en vigor de la ley 287 (22 de julio de 2014), previa actualización mediante el INPC",,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2. Bloque: Demografía y Seguridad Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Población Derechohabiente (Total),,,,,,,,,,,,,,,,,,,,,,,,,,,,"136,344",,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Población Pensionista,,,,,,,,,,,,,,,,,,,,,,,,,,,,"37,713",,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Población Activa,,,,,,,,,,,,,,,,,,,,,,,,,,,,"98,631",,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Relación Activo/Pensionado,,,,,,,,,,,,,,,,,,,,,,,,,,,,2.6,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Edad promedio Pensionista,,,,,,,,,,,,,,,,,,,,,,,,,,,,70.12,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Edad promedio Población Activa,,,,,,,,,,,,,,,,,,,,,,,,,,,,46.91,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Pensión promedio,,,,,,,,,,,,,,,,,,,,,,,,,,,,19679,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Salario promedio Población Activa,,,,,,,,,,,,,,,,,,,,,,,,,,,,16191,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Límites de pensión (Mín-Máx),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+3. Bloque: Salud Actuarial y Financiera,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Cuotas Trabajador (%),,,,,,,,,,,,,,,,,,,,,,,,,,,,12%,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Aportación Estado (%),,,,,,,,,,,,,,,,,,,,,,,,,,,,20%,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Cuotas Pensionista (%),,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Aportación Estado a cuenta pensionista (%),,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Año de descapitalización (3% real),,,,,,,,,,,,,,,,,,,,,,,,,,,,0 años,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Valuación Actuarial (Fecha),,,,,,,,,,,,,,,,,,,,,,,,,,,,31 de diciembre de 2024,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prima Media General (PMG) requerida,,,,,,,,,,,,,,,,,,,,,,,,,,,,80.24%,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Subsidio Estatal Anual (Monto),,,,,,,,,,,,,,,,,,,,,,,,,,,,4341 mdp,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Balance Institucional Anual,,,,,,,,,,,,,,,,,,,,,,,,,,,,69.7 mdp,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4. Bloque: Prestaciones y Servicios,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Catálogo de Prestaciones,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Pensiones  (Jubilación b) Vejez c) Pensión anticipada d) Incapacidad e) Invalidez f) Muerte)
+Indemnización global
+Préstamos
+Pago del seguro de enfermedad al IMSS a pensionistas (Pago a cargo del Gobierno del Estado)",,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Edad de Jubilación,,,,,,,,,,,,,,,,,,,,,,,,,,,,30 años de servicio y 65 de edad,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Requisitos: Pensión por Vejez,,,,,,,,,,,,,,,,,,,,,,,,,,,,15 años de servicio y 65 de edad,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Aguinaldo (Días),,,,,,,,,,,,,,,,,,,,,,,,,,,,60,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Tipos de Préstamos,,,,,,,,,,,,,,,,,,,,,,,,,,,,Corto Plazo (PCP). Mediano Plazo (PMP),,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Modelo de Servicios de Salud,,,,,,,,,,,,,,,,,,,,,,,,,,,,Pago del seguro de enfermedad al IMSS a pensionistas (Pago a cargo del Gobierno del Estado),,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+5. Bloque: Inversiones y Patrimonio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Portafolio: Bienes Inmuebles,,,,,,,,,,,,,,,,,,,,,,,,,,,,44 inmuebles,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Valor del Portafolio,,,,,,,,,,,,,,,,,,,,,,,,,,,,"6,190.30 mdp",,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Portafolio: Renta,,,,,,,,,,,,,,,,,,,,,,,,,,,,26.61 mdp,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Reservas Territoriales (m2),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Rendimiento Inmobiliario,,,,,,,,,,,,,,,,,,,,,,,,,,,,10.81 mdp,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Inversiones: Otros (Fideicomisos/Infraestructura),,,,,,,,,,,,,,,,,,,,,,,,,,,,"Reserva Técnica: 3,211.32 mdp",,
