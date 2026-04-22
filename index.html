@@ -17,56 +17,90 @@
 
         body { font-family: 'Inter', sans-serif; margin: 0; background: var(--oscuro-bg); color: var(--texto); display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
 
-        /* NAV & HERO */
+        /* NAVEGACIÓN */
         .nav { padding: 1rem 2rem; background: var(--oscuro-card); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; z-index: 100; }
         .nav .brand { font-weight: 800; font-size: 1.2rem; color: #fff; letter-spacing: -1px; }
         .nav .brand span { color: var(--dorado); }
 
+        /* SECCIÓN HERO */
         .hero { padding: 40px 2rem; background: radial-gradient(circle at top right, var(--guinda), transparent 500px), var(--oscuro-card); text-align: center; border-bottom: 1px solid var(--border); flex-shrink: 0; }
-        .hero h1 { font-size: 1.8rem; margin: 0; color: #fff; letter-spacing: 1px; }
+        .hero h1 { font-size: 1.8rem; margin: 0; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
         
         .search-container { max-width: 500px; margin: 20px auto 0; }
         .search-container input { width: 100%; padding: 14px 24px; border-radius: 50px; background: var(--oscuro-bg); border: 1px solid var(--border); color: white; font-size: 1rem; outline: none; transition: 0.3s; }
-        .search-container input:focus { border-color: var(--dorado); }
+        .search-container input:focus { border-color: var(--dorado); box-shadow: 0 0 15px rgba(178, 136, 84, 0.15); }
 
-        /* GRID DE ESTADOS */
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; padding: 30px 2rem; overflow-y: auto; flex-grow: 1; }
-        .state-card { background: var(--oscuro-card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; cursor: pointer; transition: 0.3s; text-align: center; }
+        /* GRID DE TARJETAS PRINCIPALES */
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; padding: 30px 2rem; overflow-y: auto; flex-grow: 1; }
+        .state-card { background: var(--oscuro-card); border: 1px solid var(--border); border-radius: 12px; padding: 30px 20px; cursor: pointer; transition: 0.3s; text-align: center; }
         .state-card:hover { border-color: var(--dorado); transform: translateY(-5px); background: rgba(178, 136, 84, 0.05); }
-        .state-card h3 { margin: 0; color: #fff; font-size: 1rem; text-transform: uppercase; }
-        .state-card .badge { display: inline-block; margin-top: 15px; padding: 5px 15px; background: var(--guinda); font-size: 0.7rem; border-radius: 20px; font-weight: 700; color: white; }
+        .state-card h3 { margin: 0; color: #fff; font-size: 1rem; text-transform: uppercase; line-height: 1.3; }
+        .state-card .badge { display: inline-block; margin-top: 15px; padding: 6px 16px; background: var(--guinda); font-size: 0.7rem; border-radius: 20px; font-weight: 700; color: white; letter-spacing: 1px; }
 
-        /* PERFIL OVERLAY */
+        /* PANEL DE PERFIL (OVERLAY) */
         .profile-overlay { position: fixed; top: 0; right: -100%; width: 100%; height: 100%; background: var(--oscuro-bg); z-index: 1000; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; }
         .profile-overlay.active { right: 0; }
-        .profile-header { padding: 15px 2rem; background: var(--oscuro-card); border-bottom: 2px solid var(--guinda); display: flex; justify-content: space-between; align-items: center; }
-        .close-btn { background: var(--guinda); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        .profile-header { padding: 15px 2rem; background: var(--oscuro-card); border-bottom: 3px solid var(--guinda); display: flex; justify-content: space-between; align-items: center; }
+        .close-btn { background: var(--guinda); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; }
 
-        .profile-body { padding: 20px; overflow-y: auto; flex-grow: 1; }
+        .profile-body { padding: 25px; overflow-y: auto; flex-grow: 1; }
         
-        /* RESUMEN SUPERIOR */
-        .exec-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
-        .summary-box { background: var(--oscuro-card); padding: 15px; border-radius: 10px; border-left: 4px solid var(--dorado); }
-        .summary-box small { font-size: 0.65rem; text-transform: uppercase; color: var(--dorado); font-weight: 800; display: block; margin-bottom: 5px; }
-        .summary-box div { font-size: 0.95rem; font-weight: 600; color: #fff; }
+        /* RESUMEN EJECUTIVO SUPERIOR */
+        .exec-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 35px; }
+        .summary-box { background: var(--oscuro-card); padding: 18px; border-radius: 10px; border-left: 4px solid var(--dorado); }
+        .summary-box small { font-size: 0.65rem; text-transform: uppercase; color: var(--dorado); font-weight: 800; display: block; margin-bottom: 6px; letter-spacing: 0.5px; }
+        .summary-box div { font-size: 1rem; font-weight: 600; color: #fff; line-height: 1.2; }
 
-        /* PILARES */
-        .pilares-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 25px; }
-        .data-group { background: var(--oscuro-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; height: fit-content; }
-        .data-group h4 { margin: 0 0 15px 0; color: var(--dorado); border-bottom: 1px solid var(--border); padding-bottom: 10px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+        /* GRID DE PILARES ESTRATÉGICOS */
+        .pilares-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+        .data-group { background: var(--oscuro-card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; height: fit-content; }
+        .data-group h4 { margin: 0 0 20px 0; color: var(--dorado); border-bottom: 1px solid var(--border); padding-bottom: 12px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800; }
 
-        .data-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; line-height: 1.5; }
-        .data-row .label { opacity: 0.65; text-align: left; padding-right: 15px; width: 45%; }
-        .data-row .value { font-weight: 600; color: #fff; text-align: right; width: 55%; }
+        /* FILAS DE DATOS OPTIMIZADAS PARA TEXTO LARGO */
+        .data-row { 
+            display: flex; 
+            flex-direction: column; /* Etiqueta arriba, valor abajo */
+            padding: 15px 0; 
+            border-bottom: 1px solid rgba(255,255,255,0.05); 
+        }
+        .data-row .label { 
+            opacity: 0.5; 
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.65rem;
+            margin-bottom: 8px;
+            color: var(--dorado);
+            letter-spacing: 0.5px;
+        }
+        .data-row .value { 
+            font-weight: 400; 
+            color: #fff; 
+            text-align: left; 
+            font-size: 0.9rem;
+            line-height: 1.6;
+            white-space: pre-line; /* RESPETA SALTOS DE LÍNEA DEL EXCEL */
+            word-break: break-word;
+        }
 
+        /* SCROLLBAR */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--dorado); }
+
+        @media (max-width: 600px) {
+            .pilares-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
+    <nav class="nav">
+        <div class="brand">DATA<span>PENSIONES</span>MX</div>
+        <div style="font-size: 0.75rem; color: var(--dorado); font-weight: bold; letter-spacing: 1px;">SISTEMA DE BENCHMARKING NACIONAL</div>
+    </nav>
+
     <div class="hero">
-        <h1>Observatorio de Pensiones Estatales</h1>
+        <h1>Observatorio de Sistemas de Pensiones Estatales</h1>
         <div class="search-container">
             <input type="text" id="stateSearch" placeholder="Busca un instituto o estado..." oninput="filterStates()">
         </div>
@@ -76,7 +110,7 @@
 
     <div class="profile-overlay" id="profilePanel">
         <div class="profile-header">
-            <h2 id="profileTitle" style="margin:0; color: var(--dorado);">Estado</h2>
+            <h2 id="profileTitle" style="margin:0; color: #fff; font-size: 1.4rem;">Estado</h2>
             <button class="close-btn" onclick="closeProfile()">CERRAR PERFIL</button>
         </div>
         <div class="profile-body">
@@ -90,6 +124,7 @@
         let rawData = [];
         let states = [];
 
+        // CARGA DE DATOS
         Papa.parse("data.csv", {
             download: true,
             header: true,
@@ -120,6 +155,7 @@
             summaryCont.innerHTML = '';
             pilaresCont.innerHTML = '';
 
+            // MAPEO DEL RESUMEN EJECUTIVO
             const resumenKeys = [
                 { l: 'Titular', k: 'Nombre del titular' },
                 { l: 'Sistema', k: 'Tipo de sistema' },
@@ -135,9 +171,10 @@
                 summaryCont.innerHTML += `<div class="summary-box"><small>${item.l}</small><div>${val}</div></div>`;
             });
 
+            // DEFINICIÓN DE BLOQUES POR PALABRAS CLAVE
             const pilares = [
-                { id: 'demo', titulo: '👥 Demografía y Derechohabiencia', keywords: ['Derechohabiente', 'Pensionista', 'Activa', 'Activo', 'Relación Activo', 'Sueldo Regulador', 'Límites', 'Salario promedio'] },
-                { id: 'actuarial', titulo: '📊 Salud Actuarial y Financiera', keywords: ['descapitalización', 'Valuación', 'Estudio Actuarial', 'Prima Media', 'Subsidio', 'Balance', 'Déficit', 'Cuota', 'Aportación'] },
+                { id: 'demo', titulo: '👥 Demografía y Derechohabiencia', keywords: ['Derechohabiente', 'Pensionista', 'Activa', 'Activo', 'Relación Activo', 'Sueldo Regulador', 'Límites', 'Salario promedio', 'Población'] },
+                { id: 'actuarial', titulo: '📊 Salud Actuarial y Financiera', keywords: ['descapitalización', 'Valuación', 'Estudio Actuarial', 'Prima Media', 'Subsidio', 'Balance', 'Déficit', 'Cuota', 'Aportación', 'Suficiencia'] },
                 { id: 'prestaciones', titulo: '💼 Prestaciones y Servicios', keywords: ['Jubilación', 'Vejez', 'Invalidez', 'viudez', 'Aguinaldo', 'Préstamos', 'Salud', 'Seguros', 'Catálogo'] },
                 { id: 'inversiones', titulo: '📈 Inversiones y Patrimonio', keywords: ['Portafolio', 'Reservas', 'Rendimiento', 'Inmuebles', 'Inversiones: Otros', 'Reserva Técnica', 'Valor del Portafolio', 'Renta'] }
             ];
@@ -149,11 +186,13 @@
                 pilaresCont.appendChild(div);
             });
 
+            // DISTRIBUCIÓN DE INDICADORES EN LAS TARJETAS
             rawData.forEach(row => {
                 const indicador = row["INDICADOR"];
                 const valor = row[stateName] || "N/D";
+                
                 if (!indicador || resumenKeys.some(rk => rk.k === indicador)) return;
-                if (indicador.includes("Bloque")) return;
+                if (indicador.includes("Bloque")) return; // Omitir títulos de bloque del Excel
 
                 let clasificado = false;
                 for (const p of pilares) {
@@ -161,15 +200,20 @@
                         document.getElementById(`cont-${p.id}`).innerHTML += `
                             <div class="data-row">
                                 <span class="label">${indicador}</span>
-                                <span class="value">${valor}</span>
+                                <div class="value">${valor}</div>
                             </div>`;
                         clasificado = true;
                         break;
                     }
                 }
                 
+                // Si no se clasificó, se envía a Demografía (como grupo general)
                 if (!clasificado && valor !== "N/D" && indicador !== "INDICADOR") {
-                    document.getElementById('cont-demo').innerHTML += `<div class="data-row"><span class="label">${indicador}</span><span class="value">${valor}</span></div>`;
+                    document.getElementById('cont-demo').innerHTML += `
+                        <div class="data-row">
+                            <span class="label">${indicador}</span>
+                            <div class="value">${valor}</div>
+                        </div>`;
                 }
             });
 
@@ -177,6 +221,7 @@
         }
 
         function closeProfile() { document.getElementById('profilePanel').classList.remove('active'); }
+
         function filterStates() {
             const term = document.getElementById('stateSearch').value.toLowerCase();
             document.querySelectorAll('.state-card').forEach(card => {
