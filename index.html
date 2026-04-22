@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Observatorio de Sistemas de Pensiones Estatales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --guinda: #7A1737;
+            --dorado: #B28854;
+            --oscuro-bg: #0d1117;
+            --oscuro-card: #161b22;
+            --border: #30363d;
+            --texto: #c9d1d9;
+        }
+
+        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--oscuro-bg); color: var(--texto); line-height: 1.6; }
+
+        /* HEADER */
+        .nav { padding: 1rem 2rem; background: rgba(22, 27, 34, 0.95); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .nav .brand { font-weight: 800; font-size: 1.2rem; color: #fff; letter-spacing: -1px; }
+        .nav .brand span { color: var(--dorado); }
+
+        /* HERO SECTION */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.8)), 
+                        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=2070'); /* Imagen profesional de fondo */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            border-bottom: 4px solid var(--guinda);
+        }
+
+        .hero h1 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; max-width: 800px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; }
+
+        .search-box { width: 100%; max-width: 600px; display: flex; gap: 10px; }
+        .search-box input { flex: 1; padding: 15px 25px; border-radius: 50px; border: 1px solid var(--border); background: rgba(255,255,255,0.1); color: #fff; backdrop-filter: blur(10px); outline: none; }
+        .search-box button { padding: 10px 30px; border-radius: 50px; border: none; background: var(--guinda); color: #fff; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .search-box button:hover { background: #961d43; transform: scale(1.05); }
+
+        /* ACCESOS DIRECTOS */
+        .container { max-width: 1100px; margin: -50px auto 50px; padding: 0 20px; }
+        .access-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        
+        .access-card {
+            background: #1e4d40; /* Verde oscuro estilo DataMéxico */
+            padding: 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .access-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .access-card h3 { margin: 0 0 10px 0; display: flex; align-items: center; gap: 10px; }
+        .access-card p { font-size: 0.9rem; opacity: 0.8; margin: 0; }
+
+        /* TEXTO INFORMATIVO */
+        .info-section { max-width: 900px; margin: 80px auto; padding: 0 20px; }
+        .info-section h2 { color: var(--dorado); border-left: 4px solid var(--guinda); padding-left: 20px; margin-bottom: 30px; }
+        .info-section p { margin-bottom: 20px; text-align: justify; opacity: 0.9; }
+
+        .footer { padding: 40px; text-align: center; border-top: 1px solid var(--border); font-size: 0.8rem; opacity: 0.6; }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="brand">OBSERVATORIO DE SISTEMAS<span>DE PENSIONES ESTATALES</span></div>
+        <div style="font-size: 0.8rem; font-weight: 600; color: var(--dorado);">IPE VERACRUZ</div>
+    </nav>
+
+    <section class="hero">
+        <p style="color: var(--dorado); font-weight: bold; margin-bottom: 5px;">EXPLORA, VISUALIZA Y COMPARA</p>
+        <h1>Sistemas de Pensiones Estatales</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Ej. Veracruz, Sinaloa, Aguascalientes..." id="searchInput">
+            <button onclick="goToStates()">BUSCAR</button>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="access-grid">
+            <a href="estados.html" class="access-card">
+                <h3>🔍 PERFILES ESTATALES</h3>
+                <p>Explore los datos demográficos, actuariales y financieros de los sistemas de pensiones estatales a través de visualizaciones interactivas personalizables.</p>
+            </a>
+            <div class="access-card" style="background: #161b22; cursor: default;">
+                <h3>📊 BENCHMARKING</h3>
+                <p>Próximamente: Herramientas de comparación masiva y generación de reportes automáticos para la toma de decisiones estratégicas.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="info-section">
+        <h2>Sobre el Observatorio</h2>
+        <p>
+            El <strong>Observatorio de Sistemas de Pensiones Estatales</strong> es un esfuerzo<strong></strong> que permite la integración, visualización y análisis de datos para mejorar la toma de decisiones de políticas públicas enfocadas en fortalecer la seguridad social en México.
+        </p>
+
+        <h3>¿Por qué se necesita una plataforma de datos previsorios?</h3>
+        <p>
+            Para transformar datos en conocimiento y en toma de decisiones estratégicas, se necesitan herramientas que ayuden a integrar información de diversas fuentes y que conviertan datos en narrativas articuladas. Actualmente, el problema principal de los sitios de datos institucionales referente a pensiones se encuentra en la dificultad para encontrar y combinar diferentes fuentes de información, visualizarlas y procesarlas para tomar decisiones acertadas.
+        </p>
+        <p>
+            Esta plataforma integrará una diversa gama de bases de datos sobre demografía, salud financiera, inversiones y prestaciones para todo el país. El Observatorio es fundamental para elaborar políticas de sostenibilidad y desarrollo regional que garanticen el bienestar de la derechohabiencia pensionista y activa en México.
+        </p>
+        <p>
+            Además de su utilidad para la integración de datos, el proyecto incluye un componente de investigación que generará análisis especializados a fin de promover estructuras pensionarias diversas y sofisticadas.
+    </section>
+
+    <footer class="footer">
+        Instituto de Pensiones del Estado de Veracruz | 2026<br>
+    </footer>
+
+    <script>
+        function goToStates() {
+            window.location.href = "estados.html";
+        }
+        // Permitir buscar con el botón "Enter"
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                goToStates();
+            }
+        });
+    </script>
+</body>
+</html>
